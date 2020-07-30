@@ -47,41 +47,41 @@ const Header = () => {
               marginLeft: "26px",
             }}
           >
-            <p>
+            <h4>
               Meticulous and motivated web developer with a flair for creating
               elegant solutions in the least amount of time. Developed an E-chat
               webapp,a Netflix-clone app, and a Github profile card using React
               as a front-end tool and firebase for managing back-end.
-            </p>
-            <p>
+            </h4>
+            <h4>
               Developed 4 landing pages,2 DOM games and a portfolio website
               using vanilla Javascript and CSS , which showcases my solid
               undestanding of wed development fundamentals.All of static
               projects are deployed on Netlify.
-            </p>
-            <p>
+            </h4>
+            <h4>
               Currently working on a project which requires a complete overhaul
               of the UI.Using Next.JS as a frontend SSR tool and Strapi(headless
               CMS) for content management.
-            </p>
-            <p>
+            </h4>
+            <h4>
               Passionate about responsive and elegant web design with a firm
               believer of mobile first approach.
-            </p>
-            <p>
-              This portfolio webapp has been created using react modern tools.I
+            </h4>
+            <h4>
+              This portfolio webapp has been created using modern react tools.I
               have used context api and reducers for managing themes and
               states.The source code can be found{" "}
               <a
                 className="header__link"
                 style={{ color: "grey" }}
-                href="http://"
+                href="https://github.com/concod/pratik-portfilio-react"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 here.
               </a>{" "}
-            </p>
+            </h4>
           </span>
         </Col>
       </Row>

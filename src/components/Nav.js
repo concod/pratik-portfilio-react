@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import "./Nav.css";
 import profile from "../img/profile.jpg";
+import resume from "../utils/Pratik resume.pdf";
 import { Typography, Button, Switch } from "antd";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { themes } from "../utils/themes";
@@ -32,33 +33,49 @@ const Nav = () => {
       style={{ backgroundColor: state.navColor, color: state.navText }}
     >
       <Title className="nav__title" style={{ color: state.navTitle }}>
-        Pratik vermun
+        Pratik Vermun
       </Title>
-      <img src={profile} alt="" />
+      <img src={profile} alt="Profile" />
       <div className="nav__text">
         Hi, my name is Pratik vermun and I'm a freelance web developer. Welcome
         to my portfolio website.
       </div>
       <div className="nav__social">
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/pratik-vermun-b72795146/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <LinkedinFilled
             style={{ color: state.navIcon }}
             className="nav__social__icons"
           />
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/concod"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GithubFilled
             style={{ color: state.navIcon }}
             className="nav__social__icons"
           />
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.facebook.com/pratik.vermun"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FacebookFilled
             style={{ color: state.navIcon }}
             className="nav__social__icons"
           />
         </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.instagram.com/the_pensive_wanderer2019/?hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <InstagramFilled
             style={{ color: state.navIcon }}
             className="nav__social__icons"
@@ -66,7 +83,7 @@ const Nav = () => {
         </a>
       </div>
 
-      <a href={profile} download="profile.jpg">
+      <a href={resume} download="Pratik resume.pdf">
         <Button
           size={"large"}
           className="nav__resumebtn"

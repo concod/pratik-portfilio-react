@@ -1,4 +1,5 @@
 import React, { createContext, useReducer } from "react";
+
 import { themeReducer } from "../components/Reducers";
 
 export const ThemeContext = createContext();
@@ -13,6 +14,7 @@ const currentTheme = {
   projectTitle: "#fcfcfc",
   projectBody: "lightgrey",
   show: true,
+  themeCurrent: "ligtWheat",
 };
 
 export const ThemeProvider = (props) => {

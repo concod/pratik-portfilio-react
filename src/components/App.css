@@ -9,6 +9,8 @@
 body {
   letter-spacing: 1.5px;
   font-family: "Roboto,sans-serif";
+  max-width: 1600px;
+  margin: auto;
 }
 h1,
 h2,

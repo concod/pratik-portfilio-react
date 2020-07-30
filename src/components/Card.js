@@ -6,7 +6,7 @@ import { Card, Button } from "antd";
 import "./Card.css";
 
 //Flip card
-const FlipCard = ({ src, title, link, desc, linkRepo }) => {
+const FlipCard = ({ src, title, link, desc, linkRepo, alt }) => {
   const { state } = useContext(ThemeContext);
 
   const [isFlipped, setIsFlipped] = useState(false);
@@ -27,7 +27,7 @@ const FlipCard = ({ src, title, link, desc, linkRepo }) => {
               backgroundColor: state.headerColor,
               boxShadow: "none",
             }}
-            cover={<img alt="example" src={src} style={{ width: "300px" }} />}
+            cover={<img alt={alt} src={src} style={{ width: "300px" }} />}
             onMouseEnter={handleClick}
             onClick={handleClick}
           >
@@ -36,7 +36,6 @@ const FlipCard = ({ src, title, link, desc, linkRepo }) => {
                 display: "flex",
                 fontSize: "16px",
                 fontWeight: "600",
-                fontFamily: "Roboto,sans-serif",
                 textTransform: "uppercase",
                 letterSpacing: "1.5px",
                 justifyContent: "center",

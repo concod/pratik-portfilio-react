@@ -15,8 +15,9 @@ export default [
     imgsrc: netflixClone,
     desc:
       "A neflix clone app, developed using React and TMDB APIs.The app has support for youtube trailer search.Used BEM as a naming convention for classes.",
-    link: "https://netclone-7570c.web.app/",
+    link: "https://netclone-7570c.firebaseapp.com/",
     linkRepo: "https://github.com/concod/net-clone-app",
+    alt: "netflix clone app",
   },
   {
     title: "Github profile Card",
@@ -24,6 +25,7 @@ export default [
     desc: "A simple github profile card developed using React.",
     link: "https://gitprofilecard.web.app/",
     linkRepo: "https://github.com/concod/githubprofilecard",
+    alt: "github profile card",
   },
 
   {
@@ -33,6 +35,7 @@ export default [
       "An online chat platform developed using React and Firebase real time database.",
     link: "https://fbmsg20.web.app/",
     linkRepo: "https://github.com/concod/facebook-messenger-clone",
+    alt: "Online chat platfrom created using React and hosted to Firebase",
   },
 
   {
@@ -42,6 +45,7 @@ export default [
       "A portfolio webapp developed using vanilla javascript and CSS.The SVG was taken from undraw and used figma for editing.",
     link: "https://pratikdev.netlify.app",
     linkRepo: "https://github.com/concod/pratik-portfolio",
+    alt: "Portfolio website developed using vanilla javascrit and Sass",
   },
   {
     title: "Movie Booking widget",
@@ -49,6 +53,7 @@ export default [
     desc: "A movie booking widget developed using vanilla javascript and CSS.",
     link: "https://moviebook20.netlify.app/",
     linkRepo: "#",
+    alt: "Movie seat booking widget",
   },
   {
     title: "Homestay Landing Page",
@@ -56,6 +61,7 @@ export default [
     desc: "A simple landing page developed using CSS Grid system and Sass.",
     link: "https://home-stay.netlify.app/",
     linkRepo: "https://github.com/concod/homestay",
+    alt: "Landing page for Hotel booking",
   },
   {
     title: "Nestaway Landing Page",
@@ -63,6 +69,7 @@ export default [
     desc: " A simple landing page developed using CSS flexbox.",
     link: "https://nestaway.netlify.app/",
     linkRepo: "https://github.com/concod/Nestaway",
+    alt: "Landing page for resort booking",
   },
   {
     title: "Book Review Website",
@@ -70,6 +77,7 @@ export default [
     desc: "A book reveiew landing page developed using Bootstrap.",
     link: "https://concod.github.io/bookapp/",
     linkRepo: "https://github.com/concod/bookapp",
+    alt: "A book review landing page",
   },
   {
     title: "Breakout Game",
@@ -77,6 +85,7 @@ export default [
     desc: "A fun game developed using HTML 5 canvas and vanilla javascript.",
     link: "https://breakout12.netlify.app/",
     linkRepo: "https://github.com/concod/Break-out-game",
+    alt: "Breakout Game ",
   },
   {
     title: "Just Travel ",
@@ -84,5 +93,6 @@ export default [
     desc: "A static travel website developed using CSS.",
     link: "https://travelaway.netlify.app/",
     linkRepo: "https://github.com/concod/travel-app",
+    alt: "Travel Website",
   },
 ];

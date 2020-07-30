@@ -43,6 +43,7 @@ const Projects = () => {
               desc={cardinfo.desc}
               link={cardinfo.link}
               linkRepo={cardinfo.linkRepo}
+              alt={cardinfo.alt}
             />
           );
         })}
