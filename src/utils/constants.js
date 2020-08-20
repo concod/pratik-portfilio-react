@@ -8,7 +8,10 @@ import breakout from "../img/breakout.PNG";
 import bookApp from "../img/bookApp.PNG";
 import justTravel from "../img/justTravel.PNG";
 import portfolio from "../img/portfolio.PNG";
-//exports
+import noteApp from "../img/next-note-app.PNG";
+import scoreboard from "../img/ScoreBoard.PNG";
+import log from "../img/log.PNG";
+//
 export default [
   {
     title: "Netflix Clone App",
@@ -19,13 +22,43 @@ export default [
     linkRepo: "https://github.com/concod/net-clone-app",
     alt: "netflix clone app",
   },
+
   {
     title: "Github profile Card",
     imgsrc: gitprofileCard,
-    desc: "A simple github profile card developed using React.",
+    desc:
+      "A progressive web app that display user's Github information, developed using React.",
     link: "https://gitprofilecard.web.app/",
     linkRepo: "https://github.com/concod/githubprofilecard",
     alt: "github profile card",
+  },
+  {
+    title: "TZ logger",
+    imgsrc: log,
+    desc:
+      "A web app that logs the users activity from different time zones and converts the user's tz to system tz.The activity log is then displayed on a calendar using a modal.Used express for managging backend API.The test app is deployed on Heroku.",
+    link: "https://github.com/concod/frontend-assignment",
+    linkRepo: "https://frontend-test2020.herokuapp.com/",
+    alt: "Users activity logger",
+  },
+  {
+    title: "CRUD notes App",
+    imgsrc: noteApp,
+    desc:
+      "A crud notes app,developed using NextJS,Rest APIs and Mongodb as the database.The project is not live right now.",
+    link: "#",
+    linkRepo: "https://github.com/concod/NextJS",
+    alt: "NEXT.JS CRUD app",
+  },
+
+  {
+    title: "Scoreboard Animation",
+    imgsrc: scoreboard,
+    desc:
+      "Scoreboard animation developed using react and Framer Motion animation library.",
+    link: "https://graphic-20.web.app",
+    linkRepo: "https://github.com/concod/Scoreboard-animation",
+    alt: "React Animation",
   },
 
   {
