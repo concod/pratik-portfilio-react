@@ -37,8 +37,8 @@ const Nav = () => {
       </Title>
       <img src={profile} alt="Profile" />
       <div className="nav__text">
-        Hi, my name is Pratik vermun and I'm a freelance web developer. Welcome
-        to my portfolio website.
+        Hi, my name is Pratik vermun and I'm a professional web developer.
+        Welcome to my portfolio website.
       </div>
       <div className="nav__social">
         <a
