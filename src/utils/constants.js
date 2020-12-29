@@ -11,7 +11,7 @@ import portfolio from "../img/portfolio.PNG";
 import noteApp from "../img/next-note-app.PNG";
 import scoreboard from "../img/ScoreBoard.PNG";
 import log from "../img/log.PNG";
-//
+
 export default [
   {
     title: "Netflix Clone App",
@@ -50,7 +50,6 @@ export default [
     linkRepo: "https://github.com/concod/NextJS",
     alt: "NEXT.JS CRUD app",
   },
-
   {
     title: "Scoreboard Animation",
     imgsrc: scoreboard,
@@ -60,7 +59,6 @@ export default [
     linkRepo: "https://github.com/concod/Scoreboard-animation",
     alt: "React Animation",
   },
-
   {
     title: "I Chat",
     imgsrc: ichat,
