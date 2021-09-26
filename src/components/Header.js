@@ -69,7 +69,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                JOYNAI
+                {''} JOYNAI
               </a> at Seven Lakes Technologies.
             </p>
             <p>
