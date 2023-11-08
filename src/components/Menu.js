@@ -8,7 +8,6 @@ import { ThemeContext } from "../contexts/ThemeContext";
 const Menu = () => {
   const [open, setOpen] = useContext(NavToggleContext);
   const { state } = useContext(ThemeContext);
-  console.log();
 
   return (
     <div className={`menu ${!state.show && "hide"}`}>
