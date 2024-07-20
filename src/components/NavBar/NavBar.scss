@@ -1,0 +1,21 @@
+@import "styles/mixins";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 10px;
+  font-weight: bold;
+  opacity: 1;
+  border-bottom: 0.5px solid #d3d3d3;
+  &.light {
+    @include light-theme;
+  }
+  &.dark {
+    @include dark-theme;
+  }
+
+  .right {
+    display: flex;
+    gap: 20px;
+  }
+}

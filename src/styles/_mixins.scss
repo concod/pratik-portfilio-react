@@ -1,0 +1,23 @@
+@import "variables";
+
+@mixin light-theme {
+  background-color: $light-bg-color;
+  color: $light-text-color;
+  a {
+    color: $light-text-color;
+    &:hover {
+      color: $light-text-hover-color;
+    }
+  }
+}
+
+@mixin dark-theme {
+  background-color: $dark-bg-color;
+  color: $dark-text-color;
+  a {
+    color: $dark-text-color;
+    &:hover {
+      color: $dark-text-hover-color;
+    }
+  }
+}

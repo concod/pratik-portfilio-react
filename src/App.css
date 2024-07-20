@@ -1,4 +1,6 @@
-@import "~antd/dist/antd.css";
+/* @import "~antd/dist/antd.css"; */
+@import "antd/dist/reset.css";
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 
 * {
   margin: 0;
@@ -8,9 +10,12 @@
 
 body {
   letter-spacing: 1.5px;
-  font-family: "Roboto,sans-serif";
+  font-family: "Josefin Sans", cursive;
   max-width: 1600px;
   margin: auto;
+}
+a {
+  text-decoration: none;
 }
 h1,
 h2,
@@ -18,8 +23,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
+  color: black;
   letter-spacing: 1.5px;
+  margin-bottom: 0px;
 }
 
 body::-webkit-scrollbar {

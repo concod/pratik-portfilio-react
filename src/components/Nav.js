@@ -24,7 +24,7 @@ const Nav = () => {
   useEffect(() => {
     darkMode
       ? dispatch({ type: "dark", payload: "dark" })
-      : dispatch({ type: "light", payload: state.themeCurrent });
+      : dispatch({ type: "light", payload: "glossyBlue" });
   }, [darkMode]);
 
   return (

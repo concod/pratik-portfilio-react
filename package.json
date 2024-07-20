@@ -3,18 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ant-design/icons": "^4.2.1",
+    "@ant-design/icons": "^5.3.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "antd": "^4.4.3",
-    "react": "^16.13.1",
-    "react-card-flip": "^1.0.11",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
-  },
-  "engines": {
-    "node": "16.20.2"
+    "antd": "^5.19.3",
+    "axios": "^1.7.2",
+    "react": "^18.3.1",
+    "react-card-flip": "^1.2.3",
+    "react-code-blocks": "^0.1.6",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.77.8"
   },
   "scripts": {
     "start": "react-scripts start",
