@@ -1,0 +1,13 @@
+.questions_js {
+  &_block {
+    padding-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    span {
+      font-weight: bold;
+    }
+    .markdown_js {
+      margin-left: 10px;
+    }
+  }
+}

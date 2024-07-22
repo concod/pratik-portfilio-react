@@ -1,3 +1,56 @@
+@import "styles/mixins";
+
 .questions_main {
+  &.dark {
+    @include dark-theme;
+  }
+
   display: flex;
+
+  &_menu {
+    margin-top: 15px;
+    border-inline-end: none !important;
+    width: 300px;
+
+    &.dark {
+      @include dark-theme;
+      .ant-menu-item-selected {
+        background-color: $dark-text-hover-bg-color;
+
+        span {
+          color: black;
+        }
+      }
+
+      i,
+      svg {
+        color: $dark-text-color;
+      }
+      span {
+        color: white;
+      }
+    }
+
+    @include respond-to-small {
+      position: absolute;
+      margin-top: 0px;
+      width: 100%;
+      height: calc(100vh - $nav-height);
+    }
+  }
+
+  &_right {
+    height: calc(100vh - $nav-height);
+    overflow-y: scroll;
+    width: 100%;
+    &_container {
+      //   padding-top: 10px;
+      max-width: 70%;
+      margin: auto;
+
+      @include respond-to-small {
+        max-width: 95%;
+      }
+    }
+  }
 }

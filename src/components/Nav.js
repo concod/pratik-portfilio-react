@@ -17,15 +17,8 @@ import { NavToggleContext } from "../contexts/NavContext";
 const { Title } = Typography;
 
 const Nav = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const { state, dispatch } = useContext(ThemeContext);
   const [navState] = useContext(NavToggleContext);
-
-  useEffect(() => {
-    darkMode
-      ? dispatch({ type: "dark", payload: "dark" })
-      : dispatch({ type: "light", payload: "glossyBlue" });
-  }, [darkMode]);
 
   return (
     <div
@@ -93,11 +86,6 @@ const Nav = () => {
           Resume
         </Button>
       </a>
-
-      <div className="nav__darkMode">
-        <h2 style={{ color: state.navText }}> Dark Mode</h2>
-        <Switch onChange={(e) => setDarkMode(!darkMode)} />
-      </div>
 
       <div
         className="nav__themeSelect "

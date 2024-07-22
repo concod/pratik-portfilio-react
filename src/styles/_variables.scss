@@ -1,9 +1,17 @@
+$nav-height: 55px;
 // Light theme variables
 $light-bg-color: #ffffff;
 $light-text-color: #000000;
 $light-text-hover-color: #6f62f3;
 
 // Dark theme variables
-$dark-bg-color: #000000;
-$dark-text-color: #ffffff;
+$dark-bg-color: #111821;
+$dark-text-color: #b4b6b9;
 $dark-text-hover-color: #8383fd;
+$dark-text-hover-bg-color: #aec6cf; /* Pastel blue */
+
+// breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extra-large: 1200px;

@@ -1,13 +1,16 @@
-import React, { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 
-import { Menu } from "antd";
+import { Menu, Spin, Flex } from "antd";
 import "./Questions.scss";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { routes } from "utils/routes";
-import { CopyBlock, dracula } from "react-code-blocks";
+import { CodeBlock, CopyBlock, dracula } from "react-code-blocks";
+import { fetchData } from "services/api";
+import JsQuestions from "components/JsQuestions/JsQuestions";
+import { ThemeContext } from "contexts/ThemeContext";
 
-const items = [
+const ITEMS = [
   {
     key: "sub1",
     label: "Questions",
@@ -16,57 +19,96 @@ const items = [
       {
         key: "js",
         label: "Javascript Questions",
-        children: [
-          {
-            key: "1",
-            label: "merge two arrays",
-            question: "",
-          },
-          {
-            key: "2",
-            label: "question on object",
-          },
-        ],
+        children: [],
       },
       {
-        key: `react-1`,
+        key: `react`,
         label: "React Questions",
+        // children: [],
       },
     ],
   },
 ];
+
 function Questions() {
+  const [jsData, setJsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [items, setItems] = useState(ITEMS);
   const jsPath = routes.questions.js.path;
   const params = useParams();
   const location = useLocation();
+  const { state } = useContext(ThemeContext);
   const navigate = useNavigate();
-
-  console.log(params, location);
+  const isDark = state.themeCurrent === "dark";
+  //   console.log(params, location);
 
   useEffect(() => {
-    console.log("llll");
+    fetchData({ endpoint: "api/js-questions" })
+      .then((res) => {
+        const data = res.data.map((val) => {
+          return {
+            id: val.id,
+            ...val.attributes,
+          };
+        });
+
+        setItems((items) => {
+          items[0].children = items[0].children.map((item) => {
+            if (item.key === "js") {
+              item.children = data.map((val) => ({
+                label: val.label,
+                key: val.key,
+                id: val.id,
+              }));
+            }
+            return item;
+          });
+          return items;
+        });
+        setJsData(data);
+        setLoading(false);
+      })
+      .catch((err) => err);
   }, []);
+
+  useEffect(() => {
+    if (loading) return;
+    const element = document.getElementById(params.id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [params, loading]);
+
   const onClick = (e) => {
     const isJs = location.pathname.includes("js");
-    navigate(isJs && jsPath.replace(":id", e.key));
+    navigate(isJs && jsPath.replace(":id", `js-${e.key}`));
   };
+
+  if (loading) return <Spin tip="Loading..." fullscreen size="large" />;
+
   return (
-    <div className="questions_main">
+    <div className={isDark ? "questions_main dark" : "questions_main light"}>
       <Menu
-        style={{ width: 256 }}
+        className={
+          isDark ? "questions_main_menu dark" : "questions_main_menu light"
+        }
         onClick={onClick}
         mode="inline"
+        defaultOpenKeys={["sub1", "js"]}
         items={items}
       />
       <div className="questions_main_right">
-        <CopyBlock
+        <div className="questions_main_right_container">
+          <JsQuestions data={jsData} />
+        </div>
+
+        {/* <CodeBlock
+          copied={"false"}
           language="jsx"
-          text={
-            "\"import React from 'react';\nimport { Link } from 'react-router-dom';\n\nfunction HomePage() {\n  const questionId = 1; // or any dynamic value\n\n  return (\n    <div>\n      <h1>Home Page</h1>\n      <Link to={`/questions/js/${questionId}`}>Go to Question {questionId}</Link>\n    </div>\n  );\n}\n\nexport default HomePage;\""
-          }
+          text={data[0]?.code}
           wrapLines={true}
           theme={dracula}
-        />
+        /> */}
       </div>
     </div>
   );

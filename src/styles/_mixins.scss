@@ -14,10 +14,39 @@
 @mixin dark-theme {
   background-color: $dark-bg-color;
   color: $dark-text-color;
+
   a {
     color: $dark-text-color;
     &:hover {
       color: $dark-text-hover-color;
     }
+  }
+}
+
+// Mixin for small devices
+@mixin respond-to-small {
+  @media (max-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+// Mixin for medium devices
+@mixin respond-to-medium {
+  @media (max-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+// Mixin for large devices
+@mixin respond-to-large {
+  @media (max-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+// Mixin for extra-large devices
+@mixin respond-to-extra-large {
+  @media (max-width: $breakpoint-extra-large) {
+    @content;
   }
 }
